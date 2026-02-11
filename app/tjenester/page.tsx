@@ -14,18 +14,16 @@ export default function TjenesterPage() {
       <section
         className="tjenester-intro relative w-full min-h-[28rem] flex items-center bg-cover bg-center bg-no-repeat px-6 py-12"
         style={{
-          backgroundImage: "url('/images/Tjenester toppbilde.jpg')",
+          backgroundImage: "url('/images/minimized/Tjenester toppbilde.jpg')",
         }}
       >
         <div className="tjenester-intro__inner relative z-10 mx-auto flex w-full max-w-none flex-col gap-10 lg:flex-row lg:items-center lg:justify-center">
-          <div className="tjenester-intro__paper flex-1 max-w-md">
-            <div className="relative mx-auto w-full max-w-md">
-              <Image
-                src="/images/Tjenester postit.png"
+          <div className="tjenester-intro__paper flex-1 max-w-md bg-transparent">
+            <div className="relative mx-auto w-full max-w-md bg-transparent">
+              <img
+                src="/images/Tjeneste postit red (1).png"
                 alt=""
-                width={400}
-                height={320}
-                className="block h-auto w-full object-contain"
+                className="block h-auto w-full max-w-md object-contain"
               />
             </div>
           </div>
@@ -51,7 +49,7 @@ export default function TjenesterPage() {
         }}
       >
         {/* Servicepunkt */}
-        <div className="service-block service-block--servicepunkt w-full py-12">
+        <div id="servicepunkt" className="service-block service-block--servicepunkt w-full py-12">
           <div className="service-block__inner flex w-full max-w-none flex-col gap-8 px-[5%] lg:px-[20%] lg:grid lg:grid-cols-[auto_1fr] lg:items-center lg:gap-8">
             <h2 className="service-block__title order-1 mb-2 inline-block w-fit border-b-2 border-[#412100] pb-0.5 font-semibold [color:var(--color-text)] [font-size:var(--font-size-2xl)] lg:col-start-2 lg:row-start-1">
               Servicepunkt
@@ -59,7 +57,7 @@ export default function TjenesterPage() {
             <div className="service-block__image order-2 shrink-0 lg:col-start-1 lg:row-span-2 lg:row-start-1">
               <div className="overflow-hidden rounded">
                 <Image
-                  src="/images/Tjenesteside Servicepunkt.png"
+                  src="/images/minimized/Tjenesteside Servicepunkt.png"
                   alt="Servicepunkt"
                   width={400}
                   height={280}
@@ -85,7 +83,7 @@ export default function TjenesterPage() {
         </div>
 
         {/* Liftutleie */}
-        <div className="service-block service-block--liftutleie w-full py-12">
+        <div id="liftutleie" className="service-block service-block--liftutleie w-full py-12">
           <div className="service-block__inner flex w-full max-w-none flex-col gap-8 px-[5%] lg:px-[20%] lg:grid lg:grid-cols-[1fr_auto] lg:items-center lg:gap-8">
             <h2 className="service-block__title order-1 mb-2 inline-block w-fit border-b-2 border-[#412100] pb-0.5 font-semibold [color:var(--color-text)] [font-size:var(--font-size-2xl)] lg:col-start-1 lg:row-start-1">
               Liftutleie
@@ -103,8 +101,12 @@ export default function TjenesterPage() {
             </div>
             <div className="service-block__content order-3 flex-1 [color:var(--color-text)] [font-size:var(--font-size-base)] lg:col-start-1 lg:row-start-2">
               <p className="service-block__text mt-4">
-                Ønsker du å leie vår hydrauliske 15M telescope lift på henger? Ta
-                kontakt.
+                Har du behov for å leie vår hydrauliske 15M telescope lift?
+                Praktisk lift på henger til små eller store prosjekter.
+              </p>
+              <p className="service-block__text mt-4">
+                Ta kontakt for mer informasjon om leieperiode, priser og
+                tilgjengelighet.
               </p>
               <Link
                 href="/kontakt"
@@ -117,7 +119,7 @@ export default function TjenesterPage() {
         </div>
 
         {/* Salg */}
-        <div className="service-block service-block--salg w-full py-12">
+        <div id="salg" className="service-block service-block--salg w-full py-12">
           <div className="service-block__inner flex w-full max-w-none flex-col gap-8 px-[5%] lg:px-[20%] lg:grid lg:grid-cols-[auto_1fr] lg:items-center lg:gap-8">
             <h2 className="service-block__title order-1 mb-2 inline-block w-fit border-b-2 border-[#412100] pb-0.5 font-semibold [color:var(--color-text)] [font-size:var(--font-size-2xl)] lg:col-start-2 lg:row-start-1">
               Salg
@@ -125,7 +127,7 @@ export default function TjenesterPage() {
             <div className="service-block__image order-2 shrink-0 lg:col-start-1 lg:row-span-2 lg:row-start-1">
               <div className="overflow-hidden rounded">
                 <Image
-                  src="/images/Tjenester salg.png"
+                  src="/images/minimized/Tjenester salg.png"
                   alt="Salg"
                   width={400}
                   height={280}
@@ -155,7 +157,7 @@ export default function TjenesterPage() {
       <section
         className="tjenester-forhandler relative w-full overflow-hidden px-6 py-10 [color:var(--color-text)] bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/images/Tjenester forhandleroversikt.jpg')",
+          backgroundImage: "url('/images/minimized/Tjenester forhandleroversikt.jpg')",
         }}
       >
         <div className="tjenester-forhandler__inner relative z-10 mx-auto max-w-4xl text-center">

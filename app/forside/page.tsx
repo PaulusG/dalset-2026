@@ -64,7 +64,7 @@ export default function ForsidePage() {
             <div className="hero__image-wrap shrink-0 lg:w-1/2">
               <div className="relative inline-block overflow-hidden rounded-sm">
                 <Image
-                  src="/images/Forside toppbilde.png"
+                  src="/images/minimized/Forside toppbilde.png"
                   alt="Servicebil"
                   width={400}
                   height={400}
@@ -135,7 +135,7 @@ export default function ForsidePage() {
           <article className="services-grid__item flex flex-col text-left">
             <div className="services-grid__image-wrap mb-4 overflow-hidden rounded-sm">
               <Image
-                src="/images/Forside reparasjon.png"
+                src="/images/minimized/forside 1.1.png"
                 alt="Service og reparasjon"
                 width={300}
                 height={300}
@@ -145,12 +145,21 @@ export default function ForsidePage() {
             <h2 className="services-grid__title mb-2 inline-block w-fit border-b-2 border-[#412100] pb-0.5 font-normal [color:var(--color-text)] [font-size:var(--font-size-2xl)]">
               Service og reparasjon
             </h2>
+            <p className="services-grid__description mb-4 [color:var(--color-text)] [font-size:var(--font-size-base)]">
+              Har utstyret stoppet, redskapet fått en skade, eller bare behov for vedlikehold.
+            </p>
+            <Link
+              href="/tjenester#servicepunkt"
+              className="services-grid__button mt-auto inline-block w-fit rounded px-6 py-3 font-calibri no-underline shadow-sm transition-transform hover:-translate-y-0.5 hover:-translate-x-[1px] hover:shadow-lg [background-color:var(--color-accent)] [color:var(--color-text)]"
+            >
+              Les mer
+            </Link>
           </article>
 
           <article className="services-grid__item flex flex-col text-left">
             <div className="services-grid__image-wrap mb-4 overflow-hidden rounded-sm">
               <Image
-                src="/images/Forside salg.png"
+                src="/images/minimized/forside 3.png"
                 alt="Salg"
                 width={300}
                 height={300}
@@ -160,12 +169,21 @@ export default function ForsidePage() {
             <h2 className="services-grid__title mb-2 inline-block w-fit border-b-2 border-[#412100] pb-0.5 font-normal [color:var(--color-text)] [font-size:var(--font-size-2xl)]">
               Salg
             </h2>
+            <p className="services-grid__description mb-4 [color:var(--color-text)] [font-size:var(--font-size-base)]">
+              Traktordekk, deler og redskap til landbruket med mer.
+            </p>
+            <Link
+              href="/tjenester#salg"
+              className="services-grid__button mt-auto inline-block w-fit rounded px-6 py-3 font-calibri no-underline shadow-sm transition-transform hover:-translate-y-0.5 hover:-translate-x-[1px] hover:shadow-lg [background-color:var(--color-accent)] [color:var(--color-text)]"
+            >
+              Les mer
+            </Link>
           </article>
 
           <article className="services-grid__item flex flex-col text-left">
             <div className="services-grid__image-wrap mb-4 overflow-hidden rounded-sm">
               <Image
-                src="/images/forside lift.png"
+                src="/images/minimized/forside 2.2.png"
                 alt="Liftutleie"
                 width={300}
                 height={300}
@@ -175,6 +193,15 @@ export default function ForsidePage() {
             <h2 className="services-grid__title mb-2 inline-block w-fit border-b-2 border-[#412100] pb-0.5 font-normal [color:var(--color-text)] [font-size:var(--font-size-2xl)]">
               Liftutleie
             </h2>
+            <p className="services-grid__description mb-4 [color:var(--color-text)] [font-size:var(--font-size-base)]">
+              Behov for å leie lift? Ta kontakt for tilgjengelighet og pris.
+            </p>
+            <Link
+              href="/tjenester#liftutleie"
+              className="services-grid__button mt-auto inline-block w-fit rounded px-6 py-3 font-calibri no-underline shadow-sm transition-transform hover:-translate-y-0.5 hover:-translate-x-[1px] hover:shadow-lg [background-color:var(--color-accent)] [color:var(--color-text)]"
+            >
+              Les mer
+            </Link>
           </article>
         </div>
       </section>

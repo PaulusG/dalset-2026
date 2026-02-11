@@ -22,11 +22,11 @@ export default function KontaktPage() {
         }}
       >
         <div className="contact-hero__overlay absolute inset-0 bg-black/40" />
-        <div className="contact-hero__inner relative z-10 mx-auto flex w-full max-w-none flex-col-reverse gap-12 px-6 lg:flex-row lg:items-center lg:justify-center lg:gap-16">
+        <div className="contact-hero__inner relative z-10 mx-auto flex w-full max-w-none flex-col-reverse gap-12 px-[5%] lg:px-6 lg:flex-row lg:items-center lg:justify-center lg:gap-16">
           <div className="contact-hero__photos flex flex-col gap-4 sm:flex-row sm:gap-6">
             <div className="relative shrink-0 overflow-hidden rounded">
               <Image
-                src="/images/kontaktside profilbilde.png"
+                src="/images/minimized/kontaktside profilbilde.png"
                 alt="Ingebrigt Dalset"
                 width={576}
                 height={521}
@@ -110,7 +110,7 @@ export default function KontaktPage() {
                 className="block"
               >
                 <Image
-                  src="/images/Kontaktsiden Vintage kart red.png"
+                  src="/images/minimized/Kontaktsiden Vintage kart red2.png"
                   alt="Kart"
                   width={400}
                   height={300}
@@ -122,20 +122,20 @@ export default function KontaktPage() {
               </p>
             </div>
             <div className="contact-map-hours__hours flex flex-1 justify-center">
-              <Image
-                src="/images/Kontaktside Postit åpningstider red.png"
-                alt="Åpningstider"
-                width={280}
-                height={200}
-                className="h-auto w-full max-w-xs object-contain"
-              />
+              <div className="relative mx-auto w-full max-w-xs">
+                <img
+                  src="/images/Kontaktside Postit åpningstider red.png"
+                  alt="Åpningstider"
+                  className="block h-auto w-full object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
 
         {/* History */}
         <div className="contact-history w-full py-16">
-          <div className="contact-history__inner mx-auto max-w-3xl space-y-6 [color:var(--color-text)] [font-size:var(--font-size-base)]">
+          <div className="contact-history__inner mx-auto max-w-3xl space-y-6 px-[5%] lg:px-0 [color:var(--color-text)] [font-size:var(--font-size-base)]">
             <p>
               Ingebr. Dalset Bilverksted ble etablert i 1963 av Ingebrikt Dalset
               senior og drives i dag av sønnen Ingebrigt Dalset.
