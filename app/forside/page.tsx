@@ -56,7 +56,7 @@ export default function ForsidePage() {
         className="hero w-full bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/images/bakgrunnsbilde.jpg')" }}
       >
-        <div className="hero__inner mx-auto flex w-full max-w-none flex-col gap-10 px-6 py-12 lg:py-16">
+        <div className="hero__inner flex w-full max-w-none flex-col gap-10 px-[5%] lg:px-[20%] py-12 lg:py-16">
           <h1 className="hero__title text-center font-script font-bold [color:var(--color-text)] [font-size:var(--font-size-hero)]">
             Ingebrigt Dalset
           </h1>
@@ -79,19 +79,19 @@ export default function ForsidePage() {
                   landbruksmaskiner og dekker store deler av Møre og Romsdal.
                 </p>
                 <p>
-                  I tillegg til salg av traktordekk og deler for landbruket.
+                  I tillegg til salg av blant annet traktordekk, redskap og deler for landbruket.
                 </p>
               </div>
               <div className="hero__buttons flex flex-wrap gap-4">
                 <Link
                   href="/tjenester"
-                  className="button inline-block rounded px-6 py-3 font-calibri no-underline hover:opacity-90 [background-color:var(--color-accent)] [color:var(--color-text)]"
+                  className="button inline-block rounded px-6 py-3 font-calibri no-underline shadow-sm transition-transform hover:-translate-y-0.5 hover:-translate-x-[1px] hover:shadow-lg [background-color:var(--color-accent)] [color:var(--color-text)]"
                 >
                   Tjenester
                 </Link>
                 <Link
                   href="/kontakt"
-                  className="button inline-block rounded px-6 py-3 font-calibri no-underline hover:opacity-90 [background-color:var(--color-accent)] [color:var(--color-text)]"
+                  className="button inline-block rounded px-6 py-3 font-calibri no-underline shadow-sm transition-transform hover:-translate-y-0.5 hover:-translate-x-[1px] hover:shadow-lg [background-color:var(--color-accent)] [color:var(--color-text)]"
                 >
                   Kontakt
                 </Link>
@@ -128,10 +128,10 @@ export default function ForsidePage() {
 
       {/* Services grid */}
       <section
-        className="services-grid w-full bg-cover bg-center bg-no-repeat px-6 py-16"
+        className="services-grid w-full bg-cover bg-center bg-no-repeat py-16"
         style={{ backgroundImage: "url('/images/bakgrunnsbilde.jpg')" }}
       >
-        <div className="services-grid__inner mx-auto grid w-full max-w-none grid-cols-1 gap-12 md:grid-cols-3">
+        <div className="services-grid__inner grid w-full max-w-none grid-cols-1 gap-12 px-[5%] md:px-[20%] md:grid-cols-3">
           <article className="services-grid__item flex flex-col text-left">
             <div className="services-grid__image-wrap mb-4 overflow-hidden rounded-sm">
               <Image
@@ -142,12 +142,9 @@ export default function ForsidePage() {
                 className="h-auto w-full object-cover"
               />
             </div>
-            <h2 className="services-grid__title mb-2 inline-block border-b-2 border-[var(--color-accent)] pb-0.5 font-normal [color:var(--color-text)] [font-size:var(--font-size-2xl)]">
+            <h2 className="services-grid__title mb-2 inline-block w-fit border-b-2 border-[#412100] pb-0.5 font-normal [color:var(--color-text)] [font-size:var(--font-size-2xl)]">
               Service og reparasjon
             </h2>
-            <p className="services-grid__description [color:var(--color-text)] [font-size:var(--font-size-base)]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
           </article>
 
           <article className="services-grid__item flex flex-col text-left">
@@ -160,12 +157,9 @@ export default function ForsidePage() {
                 className="h-auto w-full object-cover"
               />
             </div>
-            <h2 className="services-grid__title mb-2 inline-block border-b-2 border-[var(--color-accent)] pb-0.5 font-normal [color:var(--color-text)] [font-size:var(--font-size-2xl)]">
+            <h2 className="services-grid__title mb-2 inline-block w-fit border-b-2 border-[#412100] pb-0.5 font-normal [color:var(--color-text)] [font-size:var(--font-size-2xl)]">
               Salg
             </h2>
-            <p className="services-grid__description [color:var(--color-text)] [font-size:var(--font-size-base)]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
           </article>
 
           <article className="services-grid__item flex flex-col text-left">
@@ -178,12 +172,9 @@ export default function ForsidePage() {
                 className="h-auto w-full object-cover"
               />
             </div>
-            <h2 className="services-grid__title mb-2 inline-block border-b-2 border-[var(--color-accent)] pb-0.5 font-normal [color:var(--color-text)] [font-size:var(--font-size-2xl)]">
+            <h2 className="services-grid__title mb-2 inline-block w-fit border-b-2 border-[#412100] pb-0.5 font-normal [color:var(--color-text)] [font-size:var(--font-size-2xl)]">
               Liftutleie
             </h2>
-            <p className="services-grid__description [color:var(--color-text)] [font-size:var(--font-size-base)]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
           </article>
         </div>
       </section>

@@ -27,17 +27,6 @@ export default function TjenesterPage() {
                 height={320}
                 className="block h-auto w-full object-contain"
               />
-              <div className="absolute inset-0 flex flex-col items-center justify-center px-10 pt-6 pb-8 text-center">
-                <h1 className="font-semibold [color:var(--color-text)] [font-size:var(--font-size-2xl)]">
-                  Tjenester
-                </h1>
-                <p className="mt-2 [color:var(--color-text)] [font-size:var(--font-size-base)]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-                <p className="mt-1 [color:var(--color-text)] [font-size:var(--font-size-base)]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              </div>
             </div>
           </div>
           <div className="tjenester-intro__image shrink-0">
@@ -62,9 +51,9 @@ export default function TjenesterPage() {
         }}
       >
         {/* Servicepunkt */}
-        <div className="service-block service-block--servicepunkt w-full px-6 py-12">
-          <div className="service-block__inner mx-auto flex w-full max-w-none flex-col gap-8 lg:grid lg:grid-cols-[auto_1fr] lg:items-center lg:gap-8">
-            <h2 className="service-block__title order-1 mb-2 inline-block border-b-2 border-black pb-0.5 font-semibold [color:var(--color-text)] [font-size:var(--font-size-2xl)] lg:col-start-2 lg:row-start-1">
+        <div className="service-block service-block--servicepunkt w-full py-12">
+          <div className="service-block__inner flex w-full max-w-none flex-col gap-8 px-[5%] lg:px-[20%] lg:grid lg:grid-cols-[auto_1fr] lg:items-center lg:gap-8">
+            <h2 className="service-block__title order-1 mb-2 inline-block w-fit border-b-2 border-[#412100] pb-0.5 font-semibold [color:var(--color-text)] [font-size:var(--font-size-2xl)] lg:col-start-2 lg:row-start-1">
               Servicepunkt
             </h2>
             <div className="service-block__image order-2 shrink-0 lg:col-start-1 lg:row-span-2 lg:row-start-1">
@@ -86,8 +75,8 @@ export default function TjenesterPage() {
                 Zetor.
               </p>
               <Link
-                href="/kontakt"
-                className="service-block__button mt-6 inline-block rounded px-6 py-3 font-calibri no-underline hover:opacity-90 [background-color:var(--color-accent)] [color:var(--color-text)]"
+                href="mailto:post@dalsetbilverksted.no"
+                className="service-block__button mt-6 inline-block rounded px-6 py-3 font-calibri no-underline shadow-sm transition-transform hover:-translate-y-0.5 hover:-translate-x-[1px] hover:shadow-lg [background-color:var(--color-accent)] [color:var(--color-text)]"
               >
                 Bestill service
               </Link>
@@ -96,9 +85,9 @@ export default function TjenesterPage() {
         </div>
 
         {/* Liftutleie */}
-        <div className="service-block service-block--liftutleie w-full px-6 py-12">
-          <div className="service-block__inner mx-auto flex w-full max-w-none flex-col gap-8 lg:grid lg:grid-cols-[1fr_auto] lg:items-center lg:gap-8">
-            <h2 className="service-block__title order-1 mb-2 inline-block border-b-2 border-black pb-0.5 font-semibold [color:var(--color-text)] [font-size:var(--font-size-2xl)] lg:col-start-1 lg:row-start-1">
+        <div className="service-block service-block--liftutleie w-full py-12">
+          <div className="service-block__inner flex w-full max-w-none flex-col gap-8 px-[5%] lg:px-[20%] lg:grid lg:grid-cols-[1fr_auto] lg:items-center lg:gap-8">
+            <h2 className="service-block__title order-1 mb-2 inline-block w-fit border-b-2 border-[#412100] pb-0.5 font-semibold [color:var(--color-text)] [font-size:var(--font-size-2xl)] lg:col-start-1 lg:row-start-1">
               Liftutleie
             </h2>
             <div className="service-block__image order-2 shrink-0 lg:col-start-2 lg:row-span-2 lg:row-start-1">
@@ -119,7 +108,7 @@ export default function TjenesterPage() {
               </p>
               <Link
                 href="/kontakt"
-                className="service-block__button mt-6 inline-block rounded px-6 py-3 font-calibri no-underline hover:opacity-90 [background-color:var(--color-accent)] [color:var(--color-text)]"
+                className="service-block__button mt-6 inline-block rounded px-6 py-3 font-calibri no-underline shadow-sm transition-transform hover:-translate-y-0.5 hover:-translate-x-[1px] hover:shadow-lg [background-color:var(--color-accent)] [color:var(--color-text)]"
               >
                 Til kontaktsiden
               </Link>
@@ -128,9 +117,9 @@ export default function TjenesterPage() {
         </div>
 
         {/* Salg */}
-        <div className="service-block service-block--salg w-full px-6 py-12">
-          <div className="service-block__inner mx-auto flex w-full max-w-none flex-col gap-8 lg:grid lg:grid-cols-[auto_1fr] lg:items-center lg:gap-8">
-            <h2 className="service-block__title order-1 mb-2 inline-block border-b-2 border-black pb-0.5 font-semibold [color:var(--color-text)] [font-size:var(--font-size-2xl)] lg:col-start-2 lg:row-start-1">
+        <div className="service-block service-block--salg w-full py-12">
+          <div className="service-block__inner flex w-full max-w-none flex-col gap-8 px-[5%] lg:px-[20%] lg:grid lg:grid-cols-[auto_1fr] lg:items-center lg:gap-8">
+            <h2 className="service-block__title order-1 mb-2 inline-block w-fit border-b-2 border-[#412100] pb-0.5 font-semibold [color:var(--color-text)] [font-size:var(--font-size-2xl)] lg:col-start-2 lg:row-start-1">
               Salg
             </h2>
             <div className="service-block__image order-2 shrink-0 lg:col-start-1 lg:row-span-2 lg:row-start-1">
@@ -153,7 +142,7 @@ export default function TjenesterPage() {
               </p>
               <Link
                 href="/kontakt"
-                className="service-block__button mt-6 inline-block rounded px-6 py-3 font-calibri no-underline hover:opacity-90 [background-color:var(--color-accent)] [color:var(--color-text)]"
+                className="service-block__button mt-6 inline-block rounded px-6 py-3 font-calibri no-underline shadow-sm transition-transform hover:-translate-y-0.5 hover:-translate-x-[1px] hover:shadow-lg [background-color:var(--color-accent)] [color:var(--color-text)]"
               >
                 Til kontaktsiden
               </Link>
@@ -172,7 +161,7 @@ export default function TjenesterPage() {
         <div className="tjenester-forhandler__inner relative z-10 mx-auto max-w-4xl text-center">
           <div className="rounded-lg bg-black/45 px-10 py-10">
             <p className="tjenester-forhandler__suppliers font-calibri">
-              Verkstedet er godkjent leverandør for:
+              Verkstedet er blant annet godkjent leverandør for:
             </p>
             <ul className="tjenester-forhandler__list mt-2 list-inside list-none font-calibri">
               <li>- Orkel</li>

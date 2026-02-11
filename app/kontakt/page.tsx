@@ -40,9 +40,23 @@ export default function KontaktPage() {
             </h1>
             <dl className="contact-hero__list mt-4 grid grid-cols-[minmax(6rem,auto)_1fr] gap-x-4 gap-y-1.5 font-calibri">
               <dt className="text-left">Tlf:</dt>
-              <dd className="text-left">986 58 834</dd>
+              <dd className="text-left">
+                <Link
+                  href="tel:+4798658834"
+                  className="hover:underline"
+                >
+                  986 58 834
+                </Link>
+              </dd>
               <dt className="text-left">E-post:</dt>
-              <dd className="text-left">post@dalsetbilverksted.no</dd>
+              <dd className="text-left">
+                <Link
+                  href="mailto:post@dalsetbilverksted.no"
+                  className="hover:underline"
+                >
+                  post@dalsetbilverksted.no
+                </Link>
+              </dd>
               <dt className="text-left">Org.nr.:</dt>
               <dd className="text-left">934 618 246</dd>
               <dt className="text-left">Adresse:</dt>
@@ -50,6 +64,22 @@ export default function KontaktPage() {
                 Dalsetvegen 18
                 <br />
                 6350 Eidsbygda
+                <br />
+                <Link
+                  href="https://www.facebook.com/profile.php?id=61574206580500"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-block"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    className="h-8 w-8 fill-current opacity-90 hover:opacity-100"
+                    aria-label="Facebook"
+                  >
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                </Link>
               </dd>
             </dl>
           </div>
@@ -62,7 +92,7 @@ export default function KontaktPage() {
         style={{ backgroundImage: "url('/images/bakgrunnsbilde.jpg')" }}
       >
         {/* Intro */}
-        <div className="contact-intro w-full px-6 py-10">
+        <div className="contact-intro w-full py-10">
           <p className="contact-intro__text mx-auto max-w-3xl text-center [color:var(--color-text)] [font-size:var(--font-size-lg)]">
             Et moderne landbruksverksted bygget på gammeldagse verdier –
             reparerer, tilpasser og skaper løsninger som varer.
@@ -70,8 +100,8 @@ export default function KontaktPage() {
         </div>
 
         {/* Map + opening hours */}
-        <div className="contact-map-hours w-full px-6 py-12">
-          <div className="contact-map-hours__inner mx-auto flex w-full max-w-none flex-col gap-10 lg:flex-row lg:items-center lg:justify-center">
+        <div className="contact-map-hours w-full py-12">
+          <div className="contact-map-hours__inner flex w-full max-w-none flex-col gap-10 px-[5%] lg:px-[20%] lg:flex-row lg:items-center lg:justify-center">
             <div className="contact-map-hours__map flex flex-1 flex-col items-center">
               <Link
                 href={GOOGLE_MAPS_URL}
@@ -104,14 +134,14 @@ export default function KontaktPage() {
         </div>
 
         {/* History */}
-        <div className="contact-history w-full px-6 py-16">
+        <div className="contact-history w-full py-16">
           <div className="contact-history__inner mx-auto max-w-3xl space-y-6 [color:var(--color-text)] [font-size:var(--font-size-base)]">
             <p>
               Ingebr. Dalset Bilverksted ble etablert i 1963 av Ingebrikt Dalset
               senior og drives i dag av sønnen Ingebrigt Dalset.
             </p>
             <p>
-              Ingebrigt Dalset sr startet verkstedet i vognskjulet på gården sin
+              Ingebrikt Dalset sr startet verkstedet i vognskjulet på gården sin
               tidlig på 60-tallet. I 1968 bygde han verksted. Dalset bilverksted
               drev med både reparasjon, oppretting og lakkering av biler, etter
               hvert også landbruksmaskiner og traktorer. I 2010 ble det oppført en
