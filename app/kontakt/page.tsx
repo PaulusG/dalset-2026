@@ -21,7 +21,6 @@ export default function KontaktPage() {
           backgroundImage: "url('/images/kontakt bakgrunnsbilde topå.jpg')",
         }}
       >
-        <div className="contact-hero__overlay absolute inset-0 bg-black/40" />
         <div className="contact-hero__inner relative z-10 mx-auto flex w-full max-w-none flex-col-reverse gap-12 px-[5%] lg:px-6 lg:flex-row lg:items-center lg:justify-center lg:gap-16">
           <div className="contact-hero__photos flex flex-col gap-4 sm:flex-row sm:gap-6">
             <div className="relative shrink-0 overflow-hidden rounded">
@@ -49,7 +48,7 @@ export default function KontaktPage() {
               <dd className="text-left">
                 <Link
                   href="tel:+4798658834"
-                  className="hover:underline"
+                  className="underline hover:text-white hover:decoration-white"
                 >
                   986 58 834
                 </Link>
@@ -58,7 +57,7 @@ export default function KontaktPage() {
               <dd className="text-left">
                 <Link
                   href="mailto:post@dalsetbilverksted.no"
-                  className="hover:underline"
+                  className="underline hover:text-white hover:decoration-white"
                 >
                   post@dalsetbilverksted.no
                 </Link>
@@ -118,9 +117,9 @@ export default function KontaktPage() {
                 <Image
                   src="/images/minimized/Kontaktsiden Vintage kart red2.png"
                   alt="Kart"
-                  width={400}
-                  height={300}
-                  className="h-auto w-full max-w-md object-contain"
+                  width={500}
+                  height={375}
+                  className="h-auto w-full max-w-lg object-contain"
                 />
               </Link>
               <p className="contact-map-hours__caption mt-2 text-center [color:var(--color-text)] [font-size:var(--font-size-base)]">

@@ -17,7 +17,7 @@ export default function TjenesterPage() {
           backgroundImage: "url('/images/minimized/Tjenester toppbilde.jpg')",
         }}
       >
-        <div className="tjenester-intro__inner relative z-10 mx-auto flex w-full max-w-none flex-col gap-10 lg:flex-row lg:items-center lg:justify-center">
+        <div className="tjenester-intro__inner relative z-10 mx-auto flex w-full max-w-none flex-col gap-14 lg:flex-row lg:items-center lg:justify-center">
           <div className="tjenester-intro__paper flex-1 max-w-md bg-transparent">
             <div className="relative mx-auto w-full max-w-md bg-transparent">
               <img

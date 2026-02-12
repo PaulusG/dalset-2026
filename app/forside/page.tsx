@@ -137,7 +137,7 @@ export default function ForsidePage() {
         className="services-grid w-full bg-cover bg-center bg-no-repeat py-16"
         style={{ backgroundImage: "url('/images/bakgrunnsbilde.jpg')" }}
       >
-        <div className="services-grid__inner grid w-full max-w-none grid-cols-1 gap-12 px-[5%] md:px-[20%] md:grid-cols-3">
+        <div className="services-grid__inner grid w-full max-w-none grid-cols-1 gap-12 px-[5%] md:px-[10%] md:grid-cols-3">
           <article className="services-grid__item flex flex-col text-left">
             <div className="services-grid__image-wrap mb-4 overflow-hidden rounded-sm">
               <Image
