@@ -57,9 +57,15 @@ export default function ForsidePage() {
         style={{ backgroundImage: "url('/images/bakgrunnsbilde.jpg')" }}
       >
         <div className="hero__inner flex w-full max-w-none flex-col gap-10 px-[5%] lg:px-[20%] py-12 lg:py-16">
-          <h1 className="hero__title text-center font-script font-bold [color:var(--color-text)] [font-size:var(--font-size-hero)]">
-            Ingebrigt Dalset
-          </h1>
+          <div className="hero__title text-center">
+            <Image
+              src="/images/Ingebrigt Dalset logo hvit red.png"
+              alt="Ingebrigt Dalset"
+              width={400}
+              height={150}
+              className="mx-auto h-auto w-full max-w-md object-contain"
+            />
+          </div>
           <div className="hero__columns flex w-full flex-col gap-8 lg:flex-row lg:items-center lg:justify-center">
             <div className="hero__image-wrap shrink-0 lg:w-1/2">
               <div className="relative inline-block overflow-hidden rounded-sm">

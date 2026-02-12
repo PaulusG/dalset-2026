@@ -35,9 +35,15 @@ export default function KontaktPage() {
             </div>
           </div>
           <div className="contact-hero__info flex flex-col text-left [color:var(--color-text)] [font-size:var(--font-size-base)]">
-            <h1 className="contact-hero__title font-script font-bold [font-size:var(--font-size-hero)]">
-              Ingebrigt Dalset
-            </h1>
+            <div className="contact-hero__title">
+              <Image
+                src="/images/Ingebrigt Dalset logo hvit red.png"
+                alt="Ingebrigt Dalset"
+                width={400}
+                height={150}
+                className="h-auto w-full max-w-md object-contain"
+              />
+            </div>
             <dl className="contact-hero__list mt-4 grid grid-cols-[minmax(6rem,auto)_1fr] gap-x-4 gap-y-1.5 font-calibri">
               <dt className="text-left">Tlf:</dt>
               <dd className="text-left">
