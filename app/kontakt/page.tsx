@@ -107,19 +107,19 @@ export default function KontaktPage() {
         {/* Map + opening hours */}
         <div className="contact-map-hours w-full py-12">
           <div className="contact-map-hours__inner flex w-full max-w-none flex-col gap-10 px-[5%] lg:px-[20%] lg:flex-row lg:items-center lg:justify-center">
-            <div className="contact-map-hours__map flex flex-1 flex-col items-center">
+            <div className="contact-map-hours__map flex flex-[1.5] flex-col items-center">
               <Link
                 href={GOOGLE_MAPS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block"
+                className="block w-full"
               >
                 <Image
                   src="/images/minimized/Kontaktsiden Vintage kart red2.png"
                   alt="Kart"
                   width={500}
                   height={375}
-                  className="h-auto w-full max-w-lg object-contain"
+                  className="h-auto w-full max-w-xl object-contain"
                 />
               </Link>
               <p className="contact-map-hours__caption mt-2 text-center [color:var(--color-text)] [font-size:var(--font-size-base)]">
