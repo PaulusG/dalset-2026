@@ -127,7 +127,7 @@ export default function KontaktPage() {
               </p>
             </div>
             <div className="contact-map-hours__hours flex flex-1 justify-center">
-              <div className="relative mx-auto w-full max-w-xs">
+              <div className="relative mx-auto w-full max-w-md">
                 <img
                   src="/images/Kontaktside Postit åpningstider red.png"
                   alt="Åpningstider"
