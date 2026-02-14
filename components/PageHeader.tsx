@@ -30,6 +30,7 @@ export function PageHeader({ currentPage, variant: _variant, logoSrc }: PageHead
             alt="Ingebrigt Dalset"
             width={220}
             height={56}
+            quality={70}
             className="h-auto w-auto max-h-12 object-contain"
           />
         </Link>

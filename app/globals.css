@@ -1,5 +1,4 @@
-/* Script font for hero title - must be first (CSS spec) */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap');
+/* Dancing Script is self-hosted via next/font in layout (--font-dancing-script) */
 
 @tailwind base;
 @tailwind components;

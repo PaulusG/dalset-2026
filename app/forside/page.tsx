@@ -74,6 +74,7 @@ export default function ForsidePage() {
                   alt="Servicebil"
                   width={400}
                   height={400}
+                  sizes="(max-width: 1024px) 100vw, 448px"
                   className="h-auto w-full max-w-md object-cover"
                 />
               </div>

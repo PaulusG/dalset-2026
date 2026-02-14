@@ -26,7 +26,7 @@ const config: Config = {
       },
       fontFamily: {
         calibri: ["Calibri", "sans-serif"],
-        script: ["Dancing Script", "cursive"],
+        script: ["var(--font-dancing-script)", "cursive"],
       },
       backgroundImage: {
         "texture-forside": "url('/images/bakgrunnsbilde.jpg')",

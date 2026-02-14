@@ -1,8 +1,10 @@
 "use client";
 
+import { useEffect } from "react";
+
 /**
- * Injects Google Analytics (GA4) when NEXT_PUBLIC_GA_MEASUREMENT_ID is set.
- * Leave unset until production URL is live on Netlify, then set in Netlify env and redeploy.
+ * Loads Google Analytics (GA4) after page is interactive to avoid blocking LCP.
+ * Set NEXT_PUBLIC_GA_MEASUREMENT_ID in Netlify env and .env.local.
  */
 export function AnalyticsPlaceholder() {
   const measurementId =
@@ -11,24 +13,28 @@ export function AnalyticsPlaceholder() {
       ? process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
       : null;
 
-  if (!measurementId) return null;
+  useEffect(() => {
+    if (!measurementId) return;
+    const loadGtag = () => {
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+      document.head.appendChild(script);
+      (window as unknown as { dataLayer: unknown[] }).dataLayer =
+        (window as unknown as { dataLayer?: unknown[] }).dataLayer || [];
+      const gtag = (...args: unknown[]) => {
+        (window as unknown as { dataLayer: unknown[] }).dataLayer.push(args);
+      };
+      (window as unknown as { gtag: typeof gtag }).gtag = gtag;
+      gtag("js", new Date());
+      gtag("config", measurementId);
+    };
+    if (typeof requestIdleCallback !== "undefined") {
+      requestIdleCallback(loadGtag, { timeout: 2000 });
+    } else {
+      setTimeout(loadGtag, 1);
+    }
+  }, [measurementId]);
 
-  return (
-    <>
-      <script
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
-      />
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${measurementId}');
-          `,
-        }}
-      />
-    </>
-  );
+  return null;
 }
