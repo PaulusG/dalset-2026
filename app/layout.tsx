@@ -3,6 +3,7 @@ import { Dancing_Script } from "next/font/google";
 import "./globals.css";
 import { HeaderProvider } from "@/components/HeaderProvider";
 import { AnalyticsPlaceholder } from "@/components/AnalyticsPlaceholder";
+import { Footer } from "@/components/Footer";
 
 const dancingScript = Dancing_Script({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default function RootLayout({
         <AnalyticsPlaceholder />
         <HeaderProvider />
         <main className="w-full">{children}</main>
+        <Footer />
       </body>
     </html>
   );
