@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="footer w-full [background-color:var(--color-accent)] [color:var(--color-text)]">
       {/* Top section */}
       <div className="footer__top w-full border-b border-white/20 py-8">
-        <div className="footer__top-inner mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 lg:flex-row lg:justify-center lg:gap-16">
+        <div className="footer__top-inner mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 lg:flex-row lg:justify-center lg:gap-14">
           {/* Contact info - left */}
           <div className="footer__contact flex flex-col gap-2">
             <h3 className="footer__section-title mb-2 font-semibold [font-size:var(--font-size-lg)]">
@@ -59,7 +59,15 @@ export function Footer() {
       {/* Bottom section */}
       <div className="footer__bottom w-full py-4 text-center [font-size:var(--font-size-base)]">
         <p className="footer__copyright">
-          {currentYear} © Powered by Mokkis AS
+          {currentYear} © Powered by{" "}
+          <Link
+            href="https://www.mokkis.no/kontakt/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer__link underline hover:no-underline"
+          >
+            Mokkis AS
+          </Link>
         </p>
       </div>
     </footer>
