@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="footer w-full [background-color:var(--color-accent)] [color:var(--color-text)]">
       {/* Top section */}
       <div className="footer__top w-full border-b border-white/20 py-8">
-        <div className="footer__top-inner mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 lg:flex-row lg:justify-center lg:gap-14">
+        <div className="footer__top-inner mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 lg:flex-row lg:justify-center lg:[column-gap:clamp(5rem,12vw,12rem)]">
           {/* Contact info - left */}
           <div className="footer__contact flex flex-col gap-2">
             <h3 className="footer__section-title mb-2 font-semibold [font-size:var(--font-size-lg)]">

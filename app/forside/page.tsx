@@ -139,7 +139,7 @@ export default function ForsidePage() {
         style={{ backgroundImage: "url('/images/bakgrunnsbilde.jpg')" }}
       >
         <div className="services-grid__inner grid w-full max-w-none grid-cols-1 gap-12 px-[5%] md:px-[10%] md:grid-cols-3">
-          <article className="services-grid__item flex flex-col text-left">
+          <article className="services-grid__item flex flex-col px-2 text-left">
             <div className="services-grid__image-wrap mb-4 overflow-hidden rounded-sm">
               <Image
                 src="/images/minimized/forside 1.1.png"
@@ -149,21 +149,23 @@ export default function ForsidePage() {
                 className="h-auto w-full object-cover"
               />
             </div>
-            <h2 className="services-grid__title mb-2 inline-block w-fit border-b-2 border-[#412100] pb-0.5 font-normal [color:var(--color-text)] [font-size:var(--font-size-2xl)]">
-              Service og reparasjon
-            </h2>
-            <p className="services-grid__description mb-4 [color:var(--color-text)] [font-size:var(--font-size-base)]">
-              Har utstyret stoppet, redskapet fått en skade, eller bare behov for vedlikehold.
-            </p>
-            <Link
-              href="/tjenester#servicepunkt"
-              className="services-grid__button mt-auto inline-block w-fit rounded px-6 py-3 font-calibri no-underline shadow-sm transition-transform hover:-translate-y-0.5 hover:-translate-x-[1px] hover:shadow-lg [background-color:var(--color-accent)] [color:var(--color-text)]"
-            >
-              Les mer
-            </Link>
+            <div className="services-grid__content pl-8">
+              <h2 className="services-grid__title mb-2 inline-block w-fit border-b-2 border-[#412100] pb-0.5 font-normal [color:var(--color-text)] [font-size:var(--font-size-2xl)]">
+                Service og reparasjon
+              </h2>
+              <p className="services-grid__description mb-4 [color:var(--color-text)] [font-size:var(--font-size-base)]">
+                Har utstyret stoppet, redskapet fått en skade, eller bare behov for vedlikehold.
+              </p>
+              <Link
+                href="/tjenester#servicepunkt"
+                className="services-grid__button mt-auto inline-block w-fit rounded px-6 py-3 font-calibri no-underline shadow-sm transition-transform hover:-translate-y-0.5 hover:-translate-x-[1px] hover:shadow-lg [background-color:var(--color-accent)] [color:var(--color-text)]"
+              >
+                Les mer
+              </Link>
+            </div>
           </article>
 
-          <article className="services-grid__item flex flex-col text-left">
+          <article className="services-grid__item flex flex-col px-2 text-left">
             <div className="services-grid__image-wrap mb-4 overflow-hidden rounded-sm">
               <Image
                 src="/images/minimized/forside 3.png"
@@ -173,21 +175,23 @@ export default function ForsidePage() {
                 className="h-auto w-full object-cover"
               />
             </div>
-            <h2 className="services-grid__title mb-2 inline-block w-fit border-b-2 border-[#412100] pb-0.5 font-normal [color:var(--color-text)] [font-size:var(--font-size-2xl)]">
-              Salg
-            </h2>
-            <p className="services-grid__description mb-4 [color:var(--color-text)] [font-size:var(--font-size-base)]">
-              Traktordekk, deler og redskap til landbruket med mer.
-            </p>
-            <Link
-              href="/tjenester#salg"
-              className="services-grid__button mt-auto inline-block w-fit rounded px-6 py-3 font-calibri no-underline shadow-sm transition-transform hover:-translate-y-0.5 hover:-translate-x-[1px] hover:shadow-lg [background-color:var(--color-accent)] [color:var(--color-text)]"
-            >
-              Les mer
-            </Link>
+            <div className="services-grid__content pl-8">
+              <h2 className="services-grid__title mb-2 inline-block w-fit border-b-2 border-[#412100] pb-0.5 font-normal [color:var(--color-text)] [font-size:var(--font-size-2xl)]">
+                Salg
+              </h2>
+              <p className="services-grid__description mb-4 [color:var(--color-text)] [font-size:var(--font-size-base)]">
+                Traktordekk, deler og redskap til landbruket med mer.
+              </p>
+              <Link
+                href="/tjenester#salg"
+                className="services-grid__button mt-auto inline-block w-fit rounded px-6 py-3 font-calibri no-underline shadow-sm transition-transform hover:-translate-y-0.5 hover:-translate-x-[1px] hover:shadow-lg [background-color:var(--color-accent)] [color:var(--color-text)]"
+              >
+                Les mer
+              </Link>
+            </div>
           </article>
 
-          <article className="services-grid__item flex flex-col text-left">
+          <article className="services-grid__item flex flex-col px-2 text-left">
             <div className="services-grid__image-wrap mb-4 overflow-hidden rounded-sm">
               <Image
                 src="/images/minimized/forside 2.2.png"
@@ -197,18 +201,20 @@ export default function ForsidePage() {
                 className="h-auto w-full object-cover"
               />
             </div>
-            <h2 className="services-grid__title mb-2 inline-block w-fit border-b-2 border-[#412100] pb-0.5 font-normal [color:var(--color-text)] [font-size:var(--font-size-2xl)]">
-              Liftutleie
-            </h2>
-            <p className="services-grid__description mb-4 [color:var(--color-text)] [font-size:var(--font-size-base)]">
-              Behov for å leie lift? Ta kontakt for tilgjengelighet og pris.
-            </p>
-            <Link
-              href="/tjenester#liftutleie"
-              className="services-grid__button mt-auto inline-block w-fit rounded px-6 py-3 font-calibri no-underline shadow-sm transition-transform hover:-translate-y-0.5 hover:-translate-x-[1px] hover:shadow-lg [background-color:var(--color-accent)] [color:var(--color-text)]"
-            >
-              Les mer
-            </Link>
+            <div className="services-grid__content pl-8">
+              <h2 className="services-grid__title mb-2 inline-block w-fit border-b-2 border-[#412100] pb-0.5 font-normal [color:var(--color-text)] [font-size:var(--font-size-2xl)]">
+                Liftutleie
+              </h2>
+              <p className="services-grid__description mb-4 [color:var(--color-text)] [font-size:var(--font-size-base)]">
+                Behov for å leie lift? Ta kontakt for tilgjengelighet og pris.
+              </p>
+              <Link
+                href="/tjenester#liftutleie"
+                className="services-grid__button mt-auto inline-block w-fit rounded px-6 py-3 font-calibri no-underline shadow-sm transition-transform hover:-translate-y-0.5 hover:-translate-x-[1px] hover:shadow-lg [background-color:var(--color-accent)] [color:var(--color-text)]"
+              >
+                Les mer
+              </Link>
+            </div>
           </article>
         </div>
       </section>
