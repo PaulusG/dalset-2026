@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import Script from "next/script";
 
 /**
@@ -13,14 +12,7 @@ export function AnalyticsPlaceholder() {
   const isDebugEnabled =
     process.env.NODE_ENV !== "production" ||
     process.env.NEXT_PUBLIC_GA_DEBUG === "true";
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
   const [isGtagReady, setIsGtagReady] = useState(false);
-
-  const pagePath = useMemo(() => {
-    const query = searchParams.toString();
-    return query ? `${pathname}?${query}` : pathname;
-  }, [pathname, searchParams]);
 
   useEffect(() => {
     if (measurementId) return;
@@ -33,15 +25,43 @@ export function AnalyticsPlaceholder() {
 
   useEffect(() => {
     if (!measurementId || !isGtagReady) return;
-    const eventPayload = {
-      page_path: pagePath,
-      page_location: window.location.href,
+
+    const sendPageView = () => {
+      const eventPayload = {
+        page_path: `${window.location.pathname}${window.location.search}`,
+        page_location: window.location.href,
+      };
+      window.gtag("event", "page_view", eventPayload);
+      if (isDebugEnabled) {
+        console.info("[GA] page_view", { measurementId, ...eventPayload });
+      }
     };
-    window.gtag("event", "page_view", eventPayload);
-    if (isDebugEnabled) {
-      console.info("[GA] page_view", { measurementId, ...eventPayload });
-    }
-  }, [isDebugEnabled, isGtagReady, measurementId, pagePath]);
+
+    // Send first page view once GA is ready.
+    sendPageView();
+
+    // SPA navigations (Next.js uses History API under the hood).
+    const originalPushState = window.history.pushState;
+    const originalReplaceState = window.history.replaceState;
+
+    window.history.pushState = function (...args) {
+      originalPushState.apply(window.history, args);
+      sendPageView();
+    };
+
+    window.history.replaceState = function (...args) {
+      originalReplaceState.apply(window.history, args);
+      sendPageView();
+    };
+
+    window.addEventListener("popstate", sendPageView);
+
+    return () => {
+      window.history.pushState = originalPushState;
+      window.history.replaceState = originalReplaceState;
+      window.removeEventListener("popstate", sendPageView);
+    };
+  }, [isDebugEnabled, isGtagReady, measurementId]);
 
   if (!measurementId) return null;
 
